@@ -8,6 +8,8 @@ ENV LC_ALL en_US.UTF-8
 ARG NGINX_VERSION=1.12.2
 ENV NGINX_VERSION=${NGINX_VERSION}
 
+WORKDIR /root
+
 RUN \
     echo "Asia/shanghai" > /etc/timezone && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
