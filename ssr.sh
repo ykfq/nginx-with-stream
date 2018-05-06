@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 #
-# Auto install Shadowsocks Server (all version)
-#
-# Copyright (C) 2016-2018 Teddysun <i@teddysun.com>
+# Install Shadowsocks-R Server with specified options
 #
 # System Required:  CentOS 6+, Debian7+, Ubuntu12+
 #
@@ -16,14 +14,7 @@
 # https://github.com/shadowsocksrr/shadowsocksr-csharp
 #
 # Thanks:
-# @clowwindy  <https://twitter.com/clowwindy>
-# @breakwa11  <https://twitter.com/breakwa11>
-# @cyfdecyf   <https://twitter.com/cyfdecyf>
-# @madeye     <https://github.com/madeye>
-# @linusyang  <https://github.com/linusyang>
-# @Akkariiin  <https://github.com/Akkariiin>
-# 
-# Intro:  https://teddysun.com/486.html
+# @i@teddysun.com <https://teddysun.com/486.html>
 
 #funtion
 Usage(){
