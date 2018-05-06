@@ -296,23 +296,12 @@ download_files() {
     fi
 }
 
-get_char() {
-    SAVEDSTTY=`stty -g`
-    stty -echo
-    stty cbreak
-    #dd if=/dev/tty bs=1 count=1 2> /dev/null
-    stty -raw
-    stty echo
-    stty $SAVEDSTTY
-}
-
 error_detect_depends(){
     local command=$1
     local depend=`echo "${command}" | awk '{print $4}'`
     ${command}
     if [ $? != 0 ]; then
         echo -e "[${red}Error${plain}] Failed to install ${red}${depend}${plain}"
-        echo "Please visit: https://teddysun.com/486.html and contact."
         exit 1
     fi
 }
@@ -456,7 +445,6 @@ install_shadowsocks_r() {
     else
         echo
         echo -e "[${red}Error${plain}] ${software[1]} install failed."
-        echo "Please visit; https://teddysun.com/486.html and contact."
         install_cleanup
         exit 1
     fi
@@ -464,7 +452,7 @@ install_shadowsocks_r() {
 
 install_completed_r() {
     clear
-    ${shadowsocks_r_init} start
+    #${shadowsocks_r_init} start
     echo
     echo -e "Congratulations, ${green}${software[1]}${plain} server install completed!"
     echo -e "Your Server IP        : ${red} $(get_ip) ${plain}"
@@ -501,7 +489,6 @@ install_main(){
     qr_generate_r
 
     echo
-    echo "Welcome to visit: https://teddysun.com/486.html"
     echo "Enjoy it!"
     echo
 }
