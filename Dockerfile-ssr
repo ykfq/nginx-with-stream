@@ -1,0 +1,21 @@
+FROM ubuntu:18.04
+
+ARG SSR_PORT=443
+ARG SSR_PASSWD=timanetworks.com
+ARG SSR_METHOD=chacha20
+ARG SSR_PROTOCOL=auth_aes128_md5
+ARG SSR_OBFS=tls1.2_ticket_fastauth
+
+ENV SSR_PORT=${SSR_PORT}
+ENV SSR_PASSWD=${SSR_PASSWD}
+ENV SSR_METHOD=${SSR_METHOD}
+ENV SSR_PROTOCOL=${SSR_PROTOCOL}
+ENV SSR_OBFS=${SSR_OBFS}
+
+RUN \
+    apt-get update && \
+    apt-get -y install vim net-tools telnet iproute curl && \
+    curl -o ssr.sh https://raw.githubusercontent.com/ykfq/nginx-with-stream/master/ssr.sh && \
+    bash ssr.sh install ${SSR_PORT} ${SSR_PASSWD} ${SSR_METHOD} ${SSR_PROTOCOL} ${SSR_OBFS}
+
+CMD [ "bash", "-c", "/etc/init.d/shadowsocks-r restart" ]
