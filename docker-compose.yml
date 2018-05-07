@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: ./Dockerfile-ssr
       args:
-        - SSR_PORT=443
+        - SSR_PORT=4443
         - SSR_PASSWD=timanetworks.com
         - SSR_METHOD=chacha20
         - SSR_PROTOCOL=auth_aes128_md5
@@ -14,7 +14,7 @@ services:
       - ./shadowsocks-r:/etc/init.d/shadowsocks-r
     restart: always
     #ports:
-    #  - "443"
+    #  - "4443"
   nginx:
     links:
       - ssr
@@ -28,3 +28,4 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "4443:4443"
