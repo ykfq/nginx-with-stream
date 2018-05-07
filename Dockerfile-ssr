@@ -20,4 +20,4 @@ RUN ["bash", "-c", " \
     curl -o ssr.sh https://raw.githubusercontent.com/ykfq/nginx-with-stream/master/ssr.sh && \
     bash ssr.sh install ${SSR_PORT} ${SSR_PASSWD} ${SSR_METHOD} ${SSR_PROTOCOL} ${SSR_OBFS}" ] > ssr.log 2&>1
 
-CMD [ "bash", "-c", "/etc/init.d/shadowsocks-r restart && tail -f ssr.log" ]
+CMD [ "bash", "-c", "/etc/init.d/shadowsocks-r start-fg" ]

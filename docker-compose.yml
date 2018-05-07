@@ -10,6 +10,8 @@ services:
         - SSR_METHOD=chacha20
         - SSR_PROTOCOL=auth_aes128_md5
         - SSR_OBFS=tls1.2_ticket_fastauth
+    volumes:
+      - ./shadowsocks-r:/etc/init.d/shadowsocks-r
     restart: always
     #ports:
     #  - "443"
