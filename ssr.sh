@@ -452,7 +452,7 @@ install_shadowsocks_r() {
 
 install_completed_r() {
     clear
-    #${shadowsocks_r_init} start
+    ${shadowsocks_r_init} start
     echo
     echo -e "Congratulations, ${green}${software[1]}${plain} server install completed!"
     echo -e "Your Server IP        : ${red} $(get_ip) ${plain}"
