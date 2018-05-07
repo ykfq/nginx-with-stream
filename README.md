@@ -29,9 +29,11 @@ The `ssr.sh` script was based on [shadowsocks_install](https://raw.githubusercon
 
 
 # How to use
+- Install `Docker` and `docker-compose`
+
+- docker-compose up
 ```
 git clone git@github.com:ykfq/nginx-with-stream.git
 cd nginx-with-stream
-docker build --tag ykfq/nginx-with-stream:1.12.2
-docker run --name nginx-with-stream ykfq/nginx-with-stream
+docker-compose down; docker-compose up --build -d
 ```
