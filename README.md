@@ -22,7 +22,7 @@ Install SSR in CentOS 6+, Debian7+, Ubuntu12+
 ### Thanks to [teddysun](https://teddysun.com/486.html)
 The `ssr.sh` script was based on [shadowsocks_install](https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh) and had some changes:
 
-- Removed all other ss version except SSR;
+- Removed all other ss versions except SSR;
 - Make the script ask for values instead of read from stdin so that we can pass them from Dockefile;
   Thanks @ https://stackoverflow.com/a/50195430/5723841
 - Simple change of shadowsocks-r to support running foreground in docker; 
@@ -35,5 +35,6 @@ The `ssr.sh` script was based on [shadowsocks_install](https://raw.githubusercon
 ```
 git clone git@github.com:ykfq/nginx-with-stream.git
 cd nginx-with-stream
+bash install_docker-compose.sh
 docker-compose down; docker-compose up --build -d
 ```
