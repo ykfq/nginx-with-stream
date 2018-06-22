@@ -1,4 +1,4 @@
-# Run nginx adnd ssr using docker-compose
+# Run nginx and ssr using docker-compose
 > Note: This repo is for CentOS 7.x only.
 
 ## nginx-with-stream
