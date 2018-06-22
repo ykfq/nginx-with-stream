@@ -1,4 +1,5 @@
-# Run SSR using docker-compose
+# Run nginx adnd ssr using docker-compose
+> Note: This repo is for CentOS 7.x only.
 
 ## nginx-with-stream
 build nginx-with-stream in docker
@@ -29,12 +30,22 @@ The `ssr.sh` script was based on [shadowsocks_install](https://raw.githubusercon
 
 
 # How to use
-- Install `Docker` and `docker-compose`
-
-- docker-compose up
 ```
 git clone git@github.com:ykfq/nginx-with-stream.git
 cd nginx-with-stream
+```
+
+## Install docker-ce
+```
+bash install_docker-ce.sh
+```
+
+## Install docker-compose
+```
 bash install_docker-compose.sh
+```
+
+## Run containers
+```
 docker-compose down; docker-compose up --build -d
 ```
