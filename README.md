@@ -1,3 +1,6 @@
+# [Deprecated ]
+As the gov has known the traffic feature in SSR, this project is **Deprecated**.
+
 # Run nginx and ssr using docker-compose
 > Note: This repo is for CentOS 7.x only.
 
