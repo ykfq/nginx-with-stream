@@ -6,7 +6,7 @@ services:
       dockerfile: ./Dockerfile-ssr
       args:
         - SSR_PORT=4443
-        - SSR_PASSWD=timanetworks.com
+        - SSR_PASSWD=REALY_SAFE_PASSWORD
         - SSR_METHOD=chacha20
         - SSR_PROTOCOL=auth_aes128_md5
         - SSR_OBFS=tls1.2_ticket_fastauth
